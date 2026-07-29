@@ -9,7 +9,7 @@ guitarMusic = \relative c' {
   \clef treble
   \key bes \minor
   \time 2/2
-  \tempo 2 = 100
+  \tempo \markup { \rhythm{8[8]} = \rhythm{\tuplet 3/2 {4 8}} } 2 = 100
 
   r1 r
   r r r r r r r r r r r r r r r r % 16 bars
