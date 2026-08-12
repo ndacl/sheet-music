@@ -19,10 +19,14 @@ upper = \relative c'' {
   \key bes \minor
   \time 2/2
   
-  r1 r2 aes'8 r f  r | ees8 r \tuplet 3/2 {r4 8} \tuplet 3/2 {r4 8} \tuplet 3/2 {4 8} | f r ees r des r8 
-  \tuplet 3/2 {r4 aes8} | \tuplet 3/2 {des4 8} \tuplet 3/2 {4 8} \tuplet 3/2 {4 8} \tuplet 3/2 {4 8} | ees r \tuplet 3/2 {des4 f8} ees r8 
-  \tuplet 3/2 {r4 aes,8} | des4 \tuplet 3/2 {4 8} \tuplet 3/2 {4 8} \tuplet 3/2 {4 8} | \tuplet 3/2 {c4 des8} 8 4.
-  \tuplet 3/2 {r4 aes8} | \tuplet 3/2 {des4 8} \tuplet 3/2 {4 8} \tuplet 3/2 {4 8} \tuplet 3/2 {4 8} | \tuplet 3/2 {c4 des8} 8 4. r8
+  r1 r2 aes'8 r f  r | ees8 r4 8 r8 8 8 8 | f r ees r des r4 
+  aes8 | des8 8 8 8 8 8 8 8 | ees r des f ees r4 
+  aes,8 | des4 8 8 8 8 8 8 |  c des8 8 4. r8 
+  aes | des8 8 8 8 8 8 8 8 | c des8 8 4. r8
+  aes | ges' aes8 8 8  8 r des,8 8 | c c des r4 
+  aes8 des8 8 | 8 8 8 r f r ees r | des r4
+  c8 des8 8 8 8 | 8 8 8 8 8 8 8 ees | des8 8 ees f ges f ees des |  c c des ees des
+
 }
 
 lower = \relative c {
