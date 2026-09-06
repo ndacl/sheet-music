@@ -5,12 +5,12 @@
   composer = "Composer"
 }
 
-upper = \relative { \clef "bass"
-  r8 a b
+upper = \relative { \clef "bass" \key e \major
+  s1
 }
 
-lower = \relative { \clef "bass"
-  \voiceOne \crossStaff <b, e,>8  {a'8} a
+lower = \relative { \clef "bass" \key e \major
+  <b, e,>8  \change Staff = "upper" <a' b e>8 gis \change Staff = "lower" <b, e,>
 }
 
 \score { 
@@ -23,8 +23,8 @@ lower = \relative { \clef "bass"
 
   <<
     \new PianoStaff = "Piano" <<
-      \new Staff = "Upper" \upper
-      \new Staff = "Lower" \lower
+      \new Staff = "upper" \upper
+      \new Staff = "lower" \lower
     >>
   >>
 
