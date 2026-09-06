@@ -5,12 +5,16 @@
   composer = "Composer"
 }
 
-upper = \relative { \clef "bass" \key e \major
+melody = \relative { 
   s1
 }
 
-lower = \relative { \clef "bass" \key e \major
-  <b, e,>8  \change Staff = "upper" <a' b e>8 gis \change Staff = "lower" <b, e,>
+texture = \relative { 
+  \stemUp <b, e,>8  \change Staff = "u" \stemDown <a' b e>8 gis \change Staff = "d" \stemUp <b, e,>
+}
+
+bass = \relative { 
+  <>
 }
 
 \score { 
@@ -23,8 +27,13 @@ lower = \relative { \clef "bass" \key e \major
 
   <<
     \new PianoStaff = "Piano" <<
-      \new Staff = "upper" \upper
-      \new Staff = "lower" \lower
+      \new Staff = "u" << \clef "treble" \key e \major \time 2/2
+        \new Voice = "melody" \melody 
+      >>
+      \new Staff = "d" << \clef "bass" \key e \major \time 2/2
+        \new Voice = "texture" \texture 
+        \new Voice = "bass" \bass
+      >>
     >>
   >>
 
